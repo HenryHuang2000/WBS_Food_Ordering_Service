@@ -1,11 +1,13 @@
-const client_ui = {
+export {order_screen_ui, add_restaurant_ui}
+
+const order_screen_ui = {
     "type": "home",
     "blocks": [
         {
             "type": "section",
             "text": {
                 "type": "mrkdwn",
-                "text": "Welcome to the WBS Food Ordering Service!\n\n\n\n*This week's restaurant*"
+                "text": "*This week's restaurant*"
             }
         },
         {
@@ -268,4 +270,73 @@ const client_ui = {
     ]
 };
 
-export default client_ui;
+const add_restaurant_ui = {
+	"type": "modal",
+	"title": {
+		"type": "plain_text",
+		"text": "Add Restaurant",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Submit",
+		"emoji": true
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "input",
+			"element": {
+				"type": "plain_text_input"
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Restaurant Name",
+				"emoji": true
+			}
+		},
+		{
+			"type": "input",
+			"label": {
+				"type": "plain_text",
+				"text": "Restaurant Description / Notes",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": true
+			},
+			"optional": true
+		},
+		{
+			"type": "input",
+			"element": {
+				"type": "plain_text_input",
+				"multiline": true
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Menu Items (comma separated)",
+				"emoji": true
+			}
+		},
+		{
+			"type": "input",
+			"element": {
+				"type": "plain_text_input"
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Menu Image (URL)",
+				"emoji": true
+			}
+		}
+	]
+}
+
+
+
