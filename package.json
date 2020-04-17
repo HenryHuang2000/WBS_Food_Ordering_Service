@@ -6,6 +6,7 @@
   "dependencies": {
     "@slack/bolt": "^2.0.0",
     "express": "^4.17.1",
+    "pouchdb": "^7.2.1",
     "request": "^2.88.2"
   },
   "devDependencies": {},
